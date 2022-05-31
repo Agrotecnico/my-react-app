@@ -5,9 +5,10 @@ class Task extends Component {
 
     StyleCompleted() {
         return {
-            fontSize: '20px',
+            fontSize: '40px',
             color: this.props.task.done ? 'gray' : 'black',
-            textDecoration: 'none'
+            textDecoration: 'none',
+            padding: "0 20px"
         } 
     }
 
@@ -17,12 +18,13 @@ class Task extends Component {
 
         return ( 
             <p style= {this.StyleCompleted()}>
-                {task.title} - 
+{/*                 {task.title} - 
                 {task.descripcion} - 
-                {task.done} - 
-                {task.id}
-                <input type="checkbox"/>
+                {task.done} -  */}
+                
                 <button style={btnDelete}>x</button>
+                {task.id}
+                {/* <input type="checkbox"/> */}
             </p>
         )
     }
@@ -35,7 +37,8 @@ const btnDelete = {
     color: '#fff',
     padding: '10px 15px',
     border: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    margin: "0 20px"
 
 }
 
